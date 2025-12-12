@@ -1,0 +1,5 @@
+{
+  "name": "Goal",
+  "description": "An intelligent daily planner that generates personalized schedules ranging from basic structure to advanced high-performance routines using Google Gemini 2.5.",
+  "requestFramePermissions": []
+}

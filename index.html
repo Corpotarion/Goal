@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Goal">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+    
+    <!-- iOS Home Screen Icon - Essential for iPhone -->
+    <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/69/69524.png">
+    
+    <title>Goal</title>
+    <link rel="manifest" href="/manifest.json">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              brand: {
+                50: '#fafafa',  /* Zinc-50 */
+                100: '#f4f4f5', /* Zinc-100 */
+                500: '#18181b', /* Zinc-900 (Nearly Black) */
+                600: '#000000', /* Black */
+                900: '#000000', /* Black */
+              },
+              accent: {
+                500: '#71717a', /* Zinc-500 */
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        background-color: #ffffff; 
+        color: #09090b; /* Zinc 950 */
+        transition: background-color 0.3s, color 0.3s;
+        -webkit-tap-highlight-color: transparent;
+      }
+      /* Custom scrollbar - Light version */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f4f4f5; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #d4d4d8; 
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #a1a1aa; 
+      }
+
+      /* Dark mode overrides */
+      .dark body {
+        background-color: #09090b; /* Zinc 950 */
+        color: #fafafa;
+      }
+      .dark ::-webkit-scrollbar-track {
+        background: #18181b; 
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #3f3f46; 
+      }
+      .dark ::-webkit-scrollbar-thumb:hover {
+        background: #52525b; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
